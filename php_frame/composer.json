@@ -1,0 +1,21 @@
+{
+  "name": "administrator/php_frame",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "core\\": "core/"
+    },
+    "files": [
+      "app/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "ixiaoyy",
+      "email": "phpxiaoyz@163.com"
+    }
+  ],
+  "require": {
+    "psr/container": "^1.0"
+  }
+}
