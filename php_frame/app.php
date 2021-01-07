@@ -93,7 +93,9 @@ class App implements Psr\Container\ContainerInterface
         $registers = [
             'response' => \core\Response::class,
             'router' => \core\RouteCollection::class,
-            'pipeline' => \core\PipeLine::class
+            'pipeline' => \core\PipeLine::class,
+            'config' => \core\Config::class,
+            'db' => \core\Database::class
         ];
         foreach ($registers as $name => $concrete)
         {
@@ -103,8 +105,12 @@ class App implements Psr\Container\ContainerInterface
 
     protected function boot()
     {
+        App::getContainer()->get('config')->init();
         App::getContainer()->get('router')->group([
-            'namespace' => 'App\\controller'
+            'namespace' => 'App\\controller',
+            'middleware' => [
+                \App\middleware\WebMiddleWare::class
+            ]
         ], function ($router){
             require_once FRAME_BASE_PATH . '/routes/web.php'; // 因为是require 所以web.php有$router这个变量
         });
