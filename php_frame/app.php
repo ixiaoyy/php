@@ -95,7 +95,8 @@ class App implements Psr\Container\ContainerInterface
             'router' => \core\RouteCollection::class,
             'pipeline' => \core\PipeLine::class,
             'config' => \core\Config::class,
-            'db' => \core\Database::class
+            'db' => \core\Database::class,
+            \core\view\ViewInterface::class => \core\view\Blade::class
         ];
         foreach ($registers as $name => $concrete)
         {
@@ -106,6 +107,7 @@ class App implements Psr\Container\ContainerInterface
     protected function boot()
     {
         App::getContainer()->get('config')->init();
+        App::getContainer()->get(\core\view\ViewInterface::class)->init(); // 初始化视图
         App::getContainer()->get('router')->group([
             'namespace' => 'App\\controller',
             'middleware' => [

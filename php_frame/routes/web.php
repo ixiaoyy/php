@@ -32,3 +32,9 @@ $router->get('/model', function (){
 });
 
 $router->get('/controller','UserController@index');
+
+$router->get('view/blade', function (){
+   $str = '这是blade模板引擎';
+
+   return view('blade.index',compact('str'));
+});

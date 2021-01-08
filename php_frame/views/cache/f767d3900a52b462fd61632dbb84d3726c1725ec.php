@@ -1,0 +1,1 @@
+<h1> FOOTER </h1><?php /**PATH C:\php\phpDemo\php_frame\views/blade/footer.blade.php ENDPATH**/ ?>
