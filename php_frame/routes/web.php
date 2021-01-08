@@ -16,3 +16,19 @@ $router->get('/db', function () {
        App::getContainer()->get('db')->select('select * from users where id = ?', [$id])
    );
 });
+
+$router->get('/query',function (){
+    $id = 2;
+    var_dump(
+        App::getContainer()->get('db')->table('users')->where('id', $id)->get()
+    );
+});
+
+$router->get('/model', function (){
+   $users = \App\User::Where('id',1)->orWhere('id',2)->get();
+   foreach ($users as $user) {
+       echo $user->sayPhp() .'<br>';
+   }
+});
+
+$router->get('/controller','UserController@index');
