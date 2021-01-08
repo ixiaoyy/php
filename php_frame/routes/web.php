@@ -38,3 +38,9 @@ $router->get('view/blade', function (){
 
    return view('blade.index',compact('str'));
 });
+
+$router->get('view/thinkphp', function (){
+    $str = '这是thinkphp模板引擎';
+
+    return view('thinkphp.index', compact('str'));
+});
