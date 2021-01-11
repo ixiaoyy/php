@@ -49,3 +49,11 @@ $router->get('log/stack', function (){
    App::getContainer()->get('log')->debug('{language} is the best language in the world', ['language' => 'php']);
    App::getContainer()->get('log')->info("hello world");
 });
+
+$router->get('exception', function (){
+    throw new \App\exceptions\ErrorMessageException('The server did not want to bird you and threw an exception');
+});
+
+$router->get('error', function (){
+   故意写错;
+});

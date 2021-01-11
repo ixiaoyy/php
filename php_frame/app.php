@@ -98,7 +98,8 @@ class App implements Psr\Container\ContainerInterface
             'db' => \core\Database::class,
 //            \core\view\ViewInterface::class => \core\view\Blade::class
             \core\view\ViewInterface::class => \core\view\ThinkPhp::class,
-            'log' => \core\log\Logger::class
+            'log' => \core\log\Logger::class,
+            'exception' => \App\exceptions\HandleExceptions::class,
         ];
         foreach ($registers as $name => $concrete)
         {
@@ -109,6 +110,7 @@ class App implements Psr\Container\ContainerInterface
     protected function boot()
     {
         App::getContainer()->get('config')->init();
+        app('exception')->init();
         App::getContainer()->get(\core\view\ViewInterface::class)->init(); // 初始化视图
         App::getContainer()->get('router')->group([
             'namespace' => 'App\\controller',
