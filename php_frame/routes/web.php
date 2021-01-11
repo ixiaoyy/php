@@ -44,3 +44,8 @@ $router->get('view/thinkphp', function (){
 
     return view('thinkphp.index', compact('str'));
 });
+
+$router->get('log/stack', function (){
+   App::getContainer()->get('log')->debug('{language} is the best language in the world', ['language' => 'php']);
+   App::getContainer()->get('log')->info("hello world");
+});

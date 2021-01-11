@@ -19,6 +19,7 @@
     "psr/container": "^1.0",
     "ext-pdo": "*",
     "duncan3dc/blade": "^4.10",
-    "topthink/think-template": "^2.0"
+    "topthink/think-template": "^2.0",
+    "psr/log": "^1.1"
   }
 }

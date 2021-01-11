@@ -17,6 +17,7 @@
       <excludeFolder url="file://$MODULE_DIR$/php_frame/vendor/illuminate/view" />
       <excludeFolder url="file://$MODULE_DIR$/php_frame/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/php_frame/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/php_frame/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/php_frame/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/php_frame/vendor/symfony/finder" />
       <excludeFolder url="file://$MODULE_DIR$/php_frame/vendor/symfony/polyfill-mbstring" />

@@ -97,7 +97,8 @@ class App implements Psr\Container\ContainerInterface
             'config' => \core\Config::class,
             'db' => \core\Database::class,
 //            \core\view\ViewInterface::class => \core\view\Blade::class
-            \core\view\ViewInterface::class => \core\view\ThinkPhp::class
+            \core\view\ViewInterface::class => \core\view\ThinkPhp::class,
+            'log' => \core\log\Logger::class
         ];
         foreach ($registers as $name => $concrete)
         {
