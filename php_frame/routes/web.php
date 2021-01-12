@@ -1,7 +1,7 @@
 <?php
 
 $router->get('/hello', function (){
-   return '访问hello';
+   return '你在访问hello';
 });
 
 $router->get('/config', function (){

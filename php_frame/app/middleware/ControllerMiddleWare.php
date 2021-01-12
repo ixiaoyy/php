@@ -8,7 +8,7 @@ class ControllerMiddleWare
 {
     public function handle(RequestInterface $request, \Closure $next)
     {
-        echo "<hr>controller middleware<hr>";
+        echo "<hr/>controller middleware<hr/>";
         return $next($request);
     }
 }

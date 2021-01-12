@@ -68,7 +68,10 @@ class App implements Psr\Container\ContainerInterface
     // 解析依赖
     public function build($concrete)
     {
-        $reflector = new ReflectionClass($concrete); // 反射
+        try {
+            $reflector = new ReflectionClass($concrete);
+        } catch (ReflectionException $e) {
+        } // 反射
         $constructor = $reflector->getConstructor(); // 获取构造方法
         if (is_null($constructor)) {
             return $reflector->newInstance(); // 没有构造 就是没有依赖，直接返回实例

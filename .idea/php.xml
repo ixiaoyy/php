@@ -22,7 +22,46 @@
       <path value="$PROJECT_DIR$/php_frame/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/php_frame/vendor/topthink/think-template" />
       <path value="$PROJECT_DIR$/php_frame/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/php_frame/vendor/doctrine/instantiator" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/php_frame/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
 </project>

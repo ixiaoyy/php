@@ -111,24 +111,23 @@ Class RouteCollection
         $method = $request->getMethod();
         $uri = $request->getUri();
         $this->route_index = $method . $uri;
-
         $route = $this->getCurrRoute();
-        if (!$route) {
+        if(! $route)
             return 404;
-        }
 
         $middleware = $route['action']['middleware'] ?? [];
         $routerDispatch = $route['action']['uses'];
 
-        if (!$route['action']['uses'] instanceof \Closure) {
+        if(! $route['action']['uses'] instanceof \Closure){ // 不是闭包 就是控制器了
             $action = $route['action'];
-            $uses = explode('@', $action['uses']);
+            $uses = explode('@',$action['uses']);
             $controller = $action['namespace'].'\\'.$uses[0]; // 控制器
             $method = $uses[1]; // 执行的方法
             $controllerInstance = new $controller;
             $middleware = array_merge($middleware,$controllerInstance->getMiddleware()); // 合并控制器中间件
-            $routerDispatch = function ($request) use($roue, $controllerInstance, $method){
-                return $controllerInstance->callAction($method,[$request]);
+            $routerDispatch = function ($request) use($route, $controllerInstance, $method){
+
+                return $controllerInstance->callAction($method,[ $request ]);
             };
         }
 
